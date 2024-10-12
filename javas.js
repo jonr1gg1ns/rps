@@ -60,7 +60,35 @@ function playRound(humanChoice, computerChoice) {
     }
    console.log(`Human score: ${humanScore}`);  
    console.log(`Computer Score: ${computerScore}`);
+
 }
 
-playRound(humanSelection, computerSelection);
+playRound(humanSelection, computerSelection)
 
+function playGame() {
+
+
+for(let i =0; i < 5; i++) {
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
+    let game = playRound(humanSelection, computerSelection);
+    if (game === "You Won!") {
+        humanScore++;
+    }
+    if (game === "You Lost!") {
+        computerScore++
+    } else {
+        
+    }
+}
+
+if (humanScore === computerScore)
+    console.log("Tie!")
+
+if (humanScore > computerScore) {
+    console.log("You Won The Game")
+} else {
+    console.log("You Lost The Game!")
+}
+ }
+ playGame();
