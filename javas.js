@@ -50,8 +50,8 @@ if (humanScore === 5 || computerScore === 5) {
     const finalResult = document.createElement("p");
     finalResult.textContent =
         humanScore > computerScore
-            ? "Congratulations! You Won the Game!"
-            : "Game Over! You Lost the Game!";
+            ? "Congratulations! You Won the Game! Refresh to play again."
+            : "Game Over! You Lost the Game! Refresh to play again.";
     resultsDiv.appendChild(finalResult);
     rockButton.disabled = true;
     paperButton.disabled = true;
